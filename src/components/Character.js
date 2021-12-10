@@ -5,11 +5,15 @@ import styled from 'styled-components';
 const StyledCharacter = styled.div`
     margin: 0 auto;
     display: flex;
+    padding: 1%;
     justify-content: center;
-    padding: 2%;
     max-width: 100%;
     p {
-        color: ${props => props.theme.gray};
+        margin: 0 auto;
+        width: 80%;
+        padding: 2%;
+        background-color: ${props => props.theme.black};
+        color: ${props => props.theme.white};
     }
 `
 
