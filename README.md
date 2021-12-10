@@ -79,6 +79,18 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+React JS is a library that lets developers focus on the UI design instead of interfacing directly with the DOM. It lets us build components that can be reused with different parameters, such as a Character element with different names.
+
 1. Describe component state.
+Component states, along with a function to setState from React, allow us to keep things compartmentalized and easy to debug. These can be updated through functions and/or axios calls in order to hold data - usually either arrays of objects or an object itself.
+
 1. Describe props.
+Props are how we pass parameters to components. They themselves are objects, and can be used to populate, for example, the title of an image for a <h3> tag.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+A side effect can happen after the DOM is first loaded, a prop or state was updated, or many other various changes. We use { useEffect } from React to, depending on the second parameter, make some effect of a certain state or prop as follows:
+  useEffect(() => {
+    // change, for example, document's title
+    document.title = `You changed my component to ${changedComponent}.`;
+  }, [changedComponent]);
+  Without the second parameter, the useEffect would trigger after every render or change in the DOM!
